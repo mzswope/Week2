@@ -1,0 +1,27 @@
+<h1>The big brother</h1>
+
+<% if @users.any? %>
+  <h2>Users until now</h2>
+  <ul>
+    <% @users.each do |id, user| %>
+      <li><%= user %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h2> No users yet :(</h2>
+<% end %>
+
+<% if @current_user %>
+  Hello, <%= @current_user %>!
+<% else %>
+  <h2>Sign up to the big brother!</h2>
+  <form action="/signup" method="post">
+    <input name="name" />
+    <input type="submit" />
+  </form>
+<% end %>
+
+<hr/>
+<p>
+  Tired of people? See some <a href='/cats'>cats</a>!
+</p>
