@@ -18,16 +18,16 @@ post ('/calculations') do
   num_one = params[:number_one].to_i
   num_two = params[:number_two].to_i
   operation = params[:operation]
-   binding.pry
-   case operation
+
+   result = case operation
    when "add"
-    result = num_one + num_two
+    num_one + num_two
    when "subtract"
-    result = num_one - num_two
+    num_one - num_two
    when "multiply"
-    result = num_one * num_two
+    num_one * num_two
    when "divide"
-    result = num_one / num_two  
+    num_one / num_two  
    end
     
     
@@ -39,7 +39,7 @@ get ('/answer') do
   "Your total is #{@result}."   
 end
 
-get ('/counting') do #does not display anything
+get ('/counting') do 
   @numbers = (1..200)
   
   erb :sl3counting
