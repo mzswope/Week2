@@ -3,18 +3,19 @@
 	<h1 style="font-size: 20px;">Ready to calculate some numbers?  Please enter a number in each box.</h1>
 <br>
 	<form action="/calculations" method="post">
-		<h2 style="font-size: 16px;">Add</h2>			
+		<h2 style="font-size: 18px;">Choose an operation</h2>	
+			<select name="operation">
+				<option value="select">Select One</option>
+	      		<option value="add">Add</option>
+	      		<option value="subtract">Subtract</option>
+	      		<option value="multiply">Multiply</option>
+	      		<option value="divide">Divide</option>
+	      	</select>
+	      	
+		<h2 style="font-size: 16px;">Two numbers, please</h2>			
 	      First Number: <input name="number_one" />&nbsp;  +  &nbsp;Second Number: <input name="number_two" />
 	      	<br><br>
-    	<h2 style="font-size: 16px;">Subtract</h2>			
-	      First Number: <input name="number_one" />&nbsp;  - &nbsp;Second Number: <input name="number_two" />
-      		<br><br>
-      	<h2 style="font-size: 16px;">Multiply</h2>			
-	      First Number: <input name="number_one" />&nbsp;  *  &nbsp;Second Number: <input name="number_two" />
-      		<br><br>
-      	<h2 style="font-size: 16px;">Divide</h2>			
-	      First Number: <input name="number_one" />&nbsp;  / &nbsp; Second Number: <input name="number_one" />
-      		<br><br />
+	      	
 	      <input type="submit" />
 	     	<br><br><br>
 	     	

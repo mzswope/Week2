@@ -2,8 +2,11 @@
   <body>
     <h1 style="font-size: 20px;">What about picking from one of these numbers?</h1>
 <br>
-    <%= @numbers %>
-    
+  <ul>
+    <% @numbers.each do |i| %>
+      <li><%= i %></li>
+    <% end %>
+  </ul>
   </body>
 </html>
 
