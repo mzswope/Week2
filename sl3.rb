@@ -35,8 +35,10 @@ get ('/answer') do
   redirect('/') 
 end
 
-get ('/counting') do #result not correct
-  (1..200).each {|i| puts i}
+get ('/counting') do #does not display anything
+  @numbers = (1..200).each {|i| puts i}
+  
+  erb :sl3counting
 end
 
 
